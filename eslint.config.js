@@ -8,6 +8,5 @@ const reactRecommended = require('eslint-plugin-react/configs/recommended')
 export default tseslint.config(
   eslint.configs.recommended,
   reactRecommended,
-  
   ...tseslint.configs.recommendedTypeChecked,
 );
