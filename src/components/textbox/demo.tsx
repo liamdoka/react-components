@@ -1,33 +1,41 @@
 import { Done } from "@mui/icons-material";
-import { TextBoxProps, InputType } from ".";
+import { TextBoxProps, InputType, TextBoxWithButtonProps } from ".";
 import TextBox from "./textBox";
 import TextBoxWithButton from "./textBoxWithButton";
 import { usernameValidator } from "./validators/username";
+import { emailValidator } from "./validators/email";
 
 export default function TextBoxDemo() {
   const textBoxProps: TextBoxProps = {
     title: "Textbox",
     inputType: InputType.Text,
+    placeholder: "Enter email...",
+    validator: emailValidator,
+  };
+
+  const textBoxWithButtonProps: TextBoxWithButtonProps = {
+    title: "Textbox with button",
+    inputType: InputType.Text,
     placeholder: "Enter username...",
+    buttonContents: "Submit",
     validator: usernameValidator,
   };
 
   return (
     <div className="flex w-[480px] flex-col gap-8 rounded-lg px-12 py-8">
-      <h1 className="dark:text-primary-100 text-primary-900 text-2xl font-bold transition-all">
+      <h1 className="text-2xl font-bold text-primary-900 transition-all dark:text-primary-100">
         LiamDoka Textboxes
       </h1>
       <div className="flex w-full flex-col gap-4 rounded-lg">
         <TextBox {...textBoxProps} />
         <TextBoxWithButton
-          {...textBoxProps}
+          {...textBoxWithButtonProps}
           title="Textbox with icon button"
           buttonContents={<Done />}
         />
         <TextBoxWithButton
-          {...textBoxProps}
+          {...textBoxWithButtonProps}
           title="Textbox with text button"
-          buttonContents="Submit"
         />
       </div>
     </div>

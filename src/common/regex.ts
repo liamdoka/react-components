@@ -10,4 +10,7 @@ export class Selectors {
   public static isPassword: RegExp = new RegExp(
     "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
   );
+  public static isEmail: RegExp = new RegExp(
+    "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+  );
 }

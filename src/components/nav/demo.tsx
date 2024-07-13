@@ -1,5 +1,22 @@
+import { ButtonAlignment, ButtonSpacing, NavBarProps } from ".";
 import NavBar from "./navBar";
 
 export default function NavBarDemo() {
-  return <NavBar title={"LiamDoka NavBar"} />;
+  const navBarProps: NavBarProps = {
+    title: "LiamDoka Nav Bar",
+    buttons: [
+      {
+        title: "About",
+        route: "/about",
+      },
+      {
+        title: "Contact",
+        route: "/contact",
+      },
+    ],
+    buttonSpacing: ButtonSpacing.sm,
+    buttonAlignment: ButtonAlignment.left,
+  };
+
+  return <NavBar {...navBarProps} />;
 }

@@ -27,15 +27,17 @@ export default function TextBox(props: TextBoxProps) {
 
   return (
     <div className="flex grow flex-col gap-1">
-      <div className="dark:text-primary-50 text-primary-950 px-1 font-bold transition-all">
+      <div className="px-1 font-bold text-primary-950 transition-all dark:text-primary-50">
         {props.title}
       </div>
       <input
-        className="bg-primary-200 dark:bg-primary-900 text-primary-900 dark:text-primary-100 focus:outline-accent-500 rounded-md p-2 outline outline-2 outline-transparent transition-all"
+        className="rounded-md bg-primary-200 p-2 text-primary-900 outline outline-2 outline-transparent transition-all focus:outline-accent-500 dark:bg-primary-900 dark:text-primary-100"
         ref={inputRef}
         placeholder={props.placeholder}
         type={props.inputType}
         onChange={handleInput}
+        autoCorrect="off"
+        autoComplete="on"
       />
       <div className="text-xs font-bold leading-4 text-red-700 transition-all dark:text-red-500">
         {error ? <span>*{error}</span> : <pre> </pre>}
