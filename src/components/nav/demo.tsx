@@ -2,6 +2,7 @@ import { Person } from "@mui/icons-material";
 import {
   ButtonAlignment,
   ButtonSpacing,
+  NavBar,
   NavBarClear,
   NavBarPattern,
   NavBarProps,

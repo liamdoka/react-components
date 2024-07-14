@@ -10,6 +10,7 @@ export default {
       dots: heropatterns.polkadots,
       hexagons: heropatterns.hexagons,
       hideout: heropatterns.hideout,
+      banknote: heropatterns.banknote,
     },
     heroPatternColors: [colors.primary, colors.accent],
     extend: {
@@ -18,8 +19,9 @@ export default {
         accent: colors.emerald,
       },
       spacing: {
-        "screen-sm": "480px",
-        "screen-md": "640px",
+        "screen-xs": "480px",
+        "screen-sm": "640px",
+        "screen-md": "768px",
         "screen-lg": "1024px",
       },
     },

@@ -1,4 +1,5 @@
 import { NavBarDemo } from "./components/nav";
+import { SideBarDemo } from "./components/sidebar";
 import { TextBoxDemo } from "./components/textbox";
 import { useRef, useState } from "react";
 
@@ -30,7 +31,8 @@ function App() {
     >
       <div className="flex h-full w-full flex-col items-center justify-start bg-primary-100 transition-all dark:bg-primary-800">
         <NavBarDemo />
-        <section className="flex w-full grow flex-col items-center justify-evenly">
+        <section className="flex w-full max-w-screen-lg grow flex-row items-stretch justify-between py-4">
+          <SideBarDemo />
           <TextBoxDemo />
         </section>
         <footer className="flex w-full flex-row justify-start p-4">

@@ -50,7 +50,7 @@ export default function TextBoxDemo() {
   };
 
   return (
-    <div className="flex w-full max-w-[480px] flex-col gap-8 rounded-lg px-12 py-8">
+    <div className="flex w-full max-w-screen-xs flex-col gap-8 rounded-lg px-12 py-8">
       <h1 className="text-2xl font-bold text-primary-900 transition-all dark:text-primary-100">
         LiamDoka Textboxes
       </h1>
