@@ -1,5 +1,6 @@
 import NavBarDemo from "./demo";
 import NavBar from "./navBar";
+import { NavButtonProps } from "./navButtons";
 
 type NavBarProps = {
   title: string;
@@ -24,10 +25,5 @@ enum ButtonSpacing {
   xl = "gap-16",
 }
 
-type NavButtonProps = {
-  title: string;
-  route: string;
-};
-
 export { NavBar, NavBarDemo, ButtonAlignment, ButtonSpacing };
-export type { NavBarProps, NavButtonProps };
+export type { NavBarProps };

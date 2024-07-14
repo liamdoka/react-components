@@ -6,6 +6,10 @@ export default function NavBarDemo() {
     title: "LiamDoka Nav Bar",
     buttons: [
       {
+        title: "Projects",
+        route: "/projects",
+      },
+      {
         title: "About",
         route: "/about",
       },

@@ -30,7 +30,7 @@ function App() {
     >
       <div className="flex h-full w-full flex-col items-center justify-start bg-primary-100 transition-all dark:bg-primary-800">
         <NavBarDemo />
-        <section className="flex h-full w-full flex-col items-center justify-evenly">
+        <section className="flex w-full grow flex-col items-center justify-evenly">
           <TextBoxDemo />
         </section>
         <footer className="flex w-full flex-row justify-start p-4">

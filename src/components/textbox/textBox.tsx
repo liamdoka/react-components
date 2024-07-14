@@ -31,7 +31,7 @@ export default function TextBox(props: TextBoxProps) {
         {props.title}
       </div>
       <input
-        className="rounded-md bg-primary-200 p-2 text-primary-900 outline outline-2 outline-transparent transition-all focus:outline-accent-500 dark:bg-primary-900 dark:text-primary-100"
+        className={`rounded-md bg-primary-200 p-2 text-primary-900 outline outline-2 outline-transparent transition-all placeholder:text-primary-500 focus:outline-accent-500 dark:bg-primary-900 dark:text-primary-100 ${props.outlined && "inset-1 border border-primary-500"}`}
         ref={inputRef}
         placeholder={props.placeholder}
         type={props.inputType}
@@ -40,7 +40,7 @@ export default function TextBox(props: TextBoxProps) {
         autoComplete="on"
       />
       <div className="text-xs font-bold leading-4 text-red-700 transition-all dark:text-red-500">
-        {error ? <span>*{error}</span> : <pre> </pre>}
+        <div className="min-h-4">{error && `*${error}`}</div>
       </div>
     </div>
   );
