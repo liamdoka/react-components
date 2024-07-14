@@ -32,7 +32,7 @@ export default function TextBoxWithButton(props: TextBoxWithButtonProps) {
       </div>{" "}
       <div className="flex w-full grow flex-row flex-nowrap rounded-md outline outline-2 outline-transparent transition-all focus-within:outline-accent-500">
         <input
-          className={`w-full grow rounded-s-md bg-primary-200 p-2 text-primary-900 outline-none transition-colors dark:bg-primary-900 dark:text-accent-100 ${props.outlined && "inset-1 border border-primary-500"}`}
+          className={`w-full grow rounded-s-md bg-primary-200 p-2 text-primary-900 outline-none transition-colors placeholder:text-primary-500 dark:bg-primary-900 dark:text-accent-100 ${props.outlined && "border border-primary-500"}`}
           ref={inputRef}
           placeholder={props.placeholder}
           type={props.inputType}

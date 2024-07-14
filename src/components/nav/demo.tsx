@@ -1,26 +1,37 @@
-import { ButtonAlignment, ButtonSpacing, NavBarProps } from ".";
-import NavBar from "./navBar";
+import { Person } from "@mui/icons-material";
+import {
+  ButtonAlignment,
+  ButtonSpacing,
+  NavBarClear,
+  NavBarPattern,
+  NavBarProps,
+} from ".";
 
 export default function NavBarDemo() {
   const navBarProps: NavBarProps = {
     title: "LiamDoka Nav Bar",
     buttons: [
       {
-        title: "Projects",
+        contents: "Projects",
         route: "/projects",
       },
       {
-        title: "About",
+        contents: "About",
         route: "/about",
       },
       {
-        title: "Contact",
+        contents: "Contact",
         route: "/contact",
+      },
+      {},
+      {
+        contents: <Person />,
+        route: "/profile",
       },
     ],
     buttonSpacing: ButtonSpacing.sm,
-    buttonAlignment: ButtonAlignment.left,
+    buttonAlignment: ButtonAlignment.right,
   };
 
-  return <NavBar {...navBarProps} />;
+  return <NavBarPattern {...navBarProps} />;
 }

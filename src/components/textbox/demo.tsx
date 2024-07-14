@@ -44,6 +44,7 @@ export default function TextBoxDemo() {
     title: "Textbox with trailing icon",
     inputType: isPasswordVisible ? InputType.Text : InputType.Password,
     placeholder: "Enter password...",
+    outlined: true,
     trailingIcon: isPasswordVisible ? <Visibility /> : <VisibilityOff />,
     trailingOnClick: togglePasswordVisibility,
   };

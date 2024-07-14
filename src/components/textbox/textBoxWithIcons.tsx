@@ -30,7 +30,9 @@ export default function TextBoxWithIcons(props: TextBoxWithIconsProps) {
       <div className="px-1 font-bold text-primary-950 transition-all dark:text-primary-50">
         {props.title}
       </div>
-      <div className="flex w-full grow flex-row flex-nowrap items-center justify-start gap-2 rounded-md bg-primary-200 px-2 outline outline-2 outline-transparent transition-all focus-within:outline-accent-500 dark:bg-primary-900">
+      <div
+        className={`flex w-full grow flex-row flex-nowrap items-center justify-start gap-2 rounded-md bg-primary-200 px-2 outline outline-2 outline-transparent transition-all focus-within:outline-accent-500 dark:bg-primary-900 ${props.outlined && "border border-primary-500"}`}
+      >
         {props.leadingIcon && (
           <div
             className={`${props.trailingOnClick && "cursor-pointer hover:text-primary-950 dark:hover:text-primary-50"} rounded-sm text-primary-500 transition-all`}
@@ -40,7 +42,7 @@ export default function TextBoxWithIcons(props: TextBoxWithIconsProps) {
           </div>
         )}
         <input
-          className="w-full grow bg-transparent py-2 text-primary-900 outline-none transition-colors dark:text-accent-100"
+          className="w-full grow bg-transparent py-2 text-primary-900 outline-none transition-colors placeholder:text-primary-500 dark:text-accent-100"
           ref={inputRef}
           placeholder={props.placeholder}
           type={props.inputType}
