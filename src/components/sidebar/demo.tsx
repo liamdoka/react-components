@@ -1,5 +1,5 @@
 import { ForkRight, Navigation, Notes } from "@mui/icons-material";
-import { SideBar, SideBarProps } from ".";
+import { SideBar, SideBarPrimary, SideBarProps } from ".";
 
 export default function SideBarDemo() {
   const sideBarProps: SideBarProps = {
@@ -36,5 +36,5 @@ export default function SideBarDemo() {
     ],
   };
 
-  return <SideBar {...sideBarProps} />;
+  return <SideBarPrimary {...sideBarProps} />;
 }
